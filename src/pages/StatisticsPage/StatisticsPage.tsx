@@ -5,7 +5,6 @@ import {
   Card,
   CardContent,
   Grid,
-  CircularProgress,
   useTheme,
 } from "@mui/material";
 import {
@@ -179,7 +178,6 @@ const StatisticsPage = () => {
     value: React.ReactNode;
     icon?: React.ReactNode;
     description?: string;
-    loading?: boolean;
     sxProps?: object;
   };
 
@@ -188,7 +186,6 @@ const StatisticsPage = () => {
     value,
     icon,
     description,
-    loading = false,
     sxProps = {},
   }: StatsCardProps) => (
     <Card
@@ -233,7 +230,7 @@ const StatisticsPage = () => {
             mb: 1,
           }}
         >
-          {loading ? <CircularProgress size={24} /> : value}
+          {value}
         </Typography>
         {description && (
           <Typography variant="body2" color="text.secondary">

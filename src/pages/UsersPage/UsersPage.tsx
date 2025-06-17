@@ -19,8 +19,8 @@ import {
   DialogContent,
   DialogActions,
   Button,
-  CircularProgress,
   Divider,
+  CircularProgress,
 } from "@mui/material";
 import { useState } from "react";
 import { format, subDays, addMonths } from "date-fns";
@@ -669,7 +669,9 @@ const UsersPage = () => {
                 </Grid>
               </Grid>
             ) : (
-              <CircularProgress />
+              <Box display="flex" justifyContent="center" alignItems="center" minHeight={300}>
+                <CircularProgress />
+              </Box>
             )}
           </DialogContent>
           <DialogActions>

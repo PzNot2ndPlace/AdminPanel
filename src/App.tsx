@@ -1,12 +1,12 @@
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import AppRouter from "./routes/AppRouter";
 
 function App() {
   return (
     <>
-      <BrowserRouter basename="/AdminPanel/">
+      <HashRouter>
         <AppRouter />
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 }
